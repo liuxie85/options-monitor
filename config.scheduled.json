@@ -88,10 +88,7 @@
       "symbol": "PDD",
       "fetch": {
         "limit_expirations": 8,
-        "source": "opend",
-        "host": "127.0.0.1",
-        "port": 11111,
-        "spot_from_portfolio_management": true
+        "source": "yahoo"
       },
       "use": "put_base",
       "sell_put": {
@@ -116,10 +113,7 @@
       "symbol": "FUTU",
       "fetch": {
         "limit_expirations": 8,
-        "source": "opend",
-        "host": "127.0.0.1",
-        "port": 11111,
-        "spot_from_portfolio_management": true
+        "source": "yahoo"
       },
       "use": "put_base",
       "sell_put": {
@@ -259,10 +253,7 @@
       "symbol": "TCOM",
       "fetch": {
         "limit_expirations": 8,
-        "source": "opend",
-        "host": "127.0.0.1",
-        "port": 11111,
-        "spot_from_portfolio_management": true
+        "source": "yahoo"
       },
       "use": "put_base",
       "sell_put": {
