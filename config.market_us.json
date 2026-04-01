@@ -58,7 +58,10 @@
   "runtime": {
     "symbol_timeout_sec": 120,
     "portfolio_timeout_sec": 60,
-    "pipeline_timeout_sec": 600
+    "pipeline_timeout_sec": 600,
+    "deprecated": true,
+    "deprecated_replacement": "config.us.json",
+    "deprecated_reason": "Split HK/US configs; avoid schedule_key ambiguity in cron."
   },
   "alert_policy": {
     "sell_put_high_return": 0.12,
