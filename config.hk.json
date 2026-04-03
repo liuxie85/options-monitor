@@ -116,7 +116,18 @@
         "max_strike": 999999
       },
       "sell_call": {
-        "enabled": false
+        "enabled": true,
+        "avg_cost": 500,
+        "shares": 100,
+        "min_dte": 20,
+        "max_dte": 90,
+        "min_strike": 550,
+        "min_otm_pct": 0.08,
+        "min_annualized_net_return": 0.07,
+        "min_if_exercised_total_return": 0.05,
+        "min_open_interest": 50,
+        "min_volume": 10,
+        "max_spread_ratio": 0.30
       },
       "market": "HK"
     },
@@ -158,7 +169,18 @@
         "max_strike": 999999
       },
       "sell_call": {
-        "enabled": false
+        "enabled": true,
+        "avg_cost": 150,
+        "shares": 100,
+        "min_dte": 20,
+        "max_dte": 90,
+        "min_strike": 190,
+        "min_otm_pct": 0.08,
+        "min_annualized_net_return": 0.07,
+        "min_if_exercised_total_return": 0.05,
+        "min_open_interest": 50,
+        "min_volume": 10,
+        "max_spread_ratio": 0.30
       },
       "market": "HK"
     },
