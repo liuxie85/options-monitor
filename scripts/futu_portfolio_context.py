@@ -194,7 +194,18 @@ def _filter_rows_for_account_ids(rows: list[dict[str, Any]], account_ids: set[st
 def _query_rows_for_account_id(gateway: Any, method_name: str, account_id: str) -> list[dict[str, Any]]:
     method = getattr(gateway, method_name)
     try:
-        return _rows(method(acc_id=account_id))
+        raw = str(account_id).strip()
+        try:
+            acc_id = int(raw)
+        except Exception:
+            digits = "".join(ch for ch in raw if ch.isdigit())
+            if not digits:
+                raise
+            acc_id = int(digits)
+    except Exception as exc:
+        raise ValueError(f"invalid account_id for acc_id conversion: {account_id!r}") from exc
+    try:
+        return _rows(method(acc_id=acc_id))
     except Exception as exc:
         raise ValueError(
             f"{method_name} failed for mapped account_id={account_id} via acc_id selector"
